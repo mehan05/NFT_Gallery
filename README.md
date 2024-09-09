@@ -30,11 +30,16 @@ Run the Hardhat local blockchain node:
 ```bash
 npx hardhat node
 ```
-#### 2. Deploy the Smart Contracts
+#### 2. Deploy the Smart Contract, If you want to run the application on test net add your private_key and testnet_api to .env file
 
 ```bash
-npx hardhat run scripts/deploy.js --network localhost
+npx hardhat deploy 
 ```
+####If running in testnet 
+```bash
+npx hardhat deploy --network <testnet_name>
+```
+
 #### 3. Navigate to the Client
 
 ```bash
