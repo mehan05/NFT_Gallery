@@ -35,7 +35,7 @@ npx hardhat node
 ```bash
 npx hardhat deploy 
 ```
-####If running in testnet 
+#### If running in testnet 
 ```bash
 npx hardhat deploy --network <testnet_name>
 ```
