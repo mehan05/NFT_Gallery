@@ -16,6 +16,7 @@ const NFTGrid = ({tokenURIS}) => {
   useEffect(()=>{
     getdataFromURI();
   },[tokenURI])
+  console.log("from image hash:",tokenURI);
   let imageURL="";
   if(tokenURIdata.image)
   {
@@ -34,8 +35,8 @@ const NFTGrid = ({tokenURIS}) => {
         }
             <div className="p-5">
                 <h2 className="mb-2 text-2xl font-bold tracking-tight text-red-500">Token_ID: {tokenId}</h2>
-                    <h5  className="mb-2 text-1xl font-bold tracking-tight text-gray-900 text-red-600">Name: {tokenURIdata.name}</h5 >
-                <p className="mb-3 font-normal text-gray-700 text-red-700">Description: {tokenURIdata.description}</p>
+                    <h5  className="mb-2 text-1xl font-bold tracking-tight  text-red-600">Name: {tokenURIdata.name}</h5 >
+                <p className="mb-3 font-normal  text-red-700">Description: {tokenURIdata.description}</p>
             
             </div>
         </div>

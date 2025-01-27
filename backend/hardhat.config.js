@@ -10,6 +10,9 @@ module.exports = {
     sepolia:{
       url:SEPOLIA_URL,
       accounts:[PRIVATE_KEY]
+    },
+    localhost:{
+      url:"http://127.0.0.1:8545"
     }
   },
   namedAccounts:{

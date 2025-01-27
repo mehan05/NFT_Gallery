@@ -90,7 +90,7 @@ const App = () => {
         const imghash = imageUpload.data.IpfsHash;
         console.log(imghash);
         const nftmetadata = {
-          name:metadata.name,
+          name:metadata.name, 
           description:metadata.description,
           image:`https://${import.meta.env.VITE_GATEWAY}/ipfs/${imghash}`
         }
@@ -107,13 +107,14 @@ const App = () => {
 
         const metadatahash = metadataUpload.data.IpfsHash;
         const tokenURIs = `https://${import.meta.env.VITE_GATEWAY}/ipfs/${metadatahash}`;
+        console.log("gate way:",import.meta.env.VITE_GATEWAY);
 
           const transaction = await contract.create(signer,tokenURIs);
           await transaction.wait();
           setFlag(flag?false:true);       
           fetchDetails(); 
 
-        console.log(tokenURIs.tokenURI);
+        console.log("tokenURI",tokenURIs.tokenURI);
         setLoadingCard(true);
   }
     catch (error) {
